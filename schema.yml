@@ -1,4 +1,4 @@
 foobar-tmpl:
-  name: "foobar"
+  asset_prefix: "foobar"
   fields:
     project_name: string
