@@ -5,7 +5,7 @@
 // schema.yml
 // DO NOT EDIT!
 
-package main
+package forge
 
 import (
 	"bytes"
