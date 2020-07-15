@@ -2,6 +2,7 @@
 // sources:
 // foobar/config/cfg.go.tpl
 // foobar/main.go.tpl
+// schema.yml
 // DO NOT EDIT!
 
 package main
@@ -109,6 +110,26 @@ func foobarMainGoTpl() (*asset, error) {
 	return a, nil
 }
 
+var _schemaYml = "\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x4a\xcb\xcf\x4f\x4a\x2c\xd2\x2d\xc9\x2d\xc8\xb1\xe2\x52\x50\xc8\x4b\xcc\x4d\xb5\x52\x50\x82\x88\x2a\x71\x29\x28\xa4\x65\xa6\xe6\xa4\x14\x83\xa4\x14\x14\x0a\x8a\xf2\xb3\x52\x93\x4b\xe2\x21\x8a\x8a\x4b\x8a\x32\xf3\xd2\x01\x01\x00\x00\xff\xff\xa9\x6d\x58\x02\x40\x00\x00\x00"
+
+func schemaYmlBytes() ([]byte, error) {
+	return bindataRead(
+		_schemaYml,
+		"schema.yml",
+	)
+}
+
+func schemaYml() (*asset, error) {
+	bytes, err := schemaYmlBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "schema.yml", size: 64, mode: os.FileMode(420), modTime: time.Unix(1594819529, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
 // Asset loads and returns the asset for the given name.
 // It returns an error if the asset could not be found or
 // could not be loaded.
@@ -163,6 +184,7 @@ func AssetNames() []string {
 var _bindata = map[string]func() (*asset, error){
 	"foobar/config/cfg.go.tpl": foobarConfigCfgGoTpl,
 	"foobar/main.go.tpl":       foobarMainGoTpl,
+	"schema.yml":               schemaYml,
 }
 
 // AssetDir returns the file names below a certain
@@ -212,6 +234,7 @@ var _bintree = &bintree{nil, map[string]*bintree{
 		}},
 		"main.go.tpl": &bintree{foobarMainGoTpl, map[string]*bintree{}},
 	}},
+	"schema.yml": &bintree{schemaYml, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory
