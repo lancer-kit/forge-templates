@@ -1,0 +1,5 @@
+tmpl:
+  "foobar-tmpl":
+    name: "foobar"
+    fields:
+      project_name: string
