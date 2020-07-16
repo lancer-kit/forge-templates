@@ -1,0 +1,4 @@
+foobar-tmpl:
+  assetprefix: "foobar"
+  fields:
+    project_name: string

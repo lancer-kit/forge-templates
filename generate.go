@@ -1,0 +1,3 @@
+package forge
+
+//go:generate go-bindata -nomemcopy -pkg forge -prefix templates/ -ignore .git/ -ignore README.md -ignore generate.go -ignore bindata.go -ignore .gitignore -ignore .idea -o bindata.go ./...
